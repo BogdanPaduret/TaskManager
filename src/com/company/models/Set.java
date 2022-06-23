@@ -36,6 +36,7 @@ public class Set<T extends Comparable<T>> {
             if (loop.getData().equals(data)) {
                 return true;
             }
+            loop = loop.getNext();
         }
         return false;
     }

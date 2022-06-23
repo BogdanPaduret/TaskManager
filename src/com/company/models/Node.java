@@ -41,7 +41,12 @@ public class Node<T> {
         String string = "";
 
         string += "Data: " + getData().toString() + "\n";
-        string += "Next: " + getNext().getData().toString();
+        string += "Next: ";
+        if (getNext() != null) {
+            string += getNext().getData().toString();
+        } else {
+            string += " NULL!";
+        }
 
         return string;
     }
